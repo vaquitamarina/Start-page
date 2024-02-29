@@ -1,35 +1,92 @@
+import { Github, Youtube, Palette } from "lucide-react"
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Header } from './Components/Header.jsx'
+import { Card } from './Components/Card.jsx'
+import { Clock } from './Components/Clock.jsx'
+import { Weather } from "./Components/Weather.jsx"
+
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+    const [count, setCount] = useState(0)
+    return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header></Header>
+      <div className='wrap'>
+            <div className='grid1'>
+            <Card title={'a'} href={'https://github.com/vaquitamarina'} >             
+                
+                <Github size={48}/>
+            </Card>
+            </div>
+
+            <div className='grid2'>
+            <Card title={'Youtube'} href={'https://www.youtube.com/'} >
+                <Youtube size={48}/>
+            </Card>
+            </div>
+            
+            <div className='grid3'>
+            <Card title={'Colors'} href={'https://coolors.co/generate'} >
+                <Palette size={48}/>
+            </Card>
+            </div>
+            
+            <div className='grid4'>
+            <Card title={'Colors'} href={'https://coolors.co/generate'} >
+                <Palette size={48}/>
+            </Card>
+            </div>
+
+            <div className='grid5'>
+            <Card title={''} href={'https://github.com/vaquitamarina'} >
+                <Github size={48}/>
+            </Card>
+            </div>
+
+            <div className='grid6'>
+            <Card title={''} href={'https://www.youtube.com/'} >
+                <Youtube size={48}/>
+            </Card>
+            </div>
+
+            <div className='grid7'>
+            <Card title={'Colors'} href={'https://coolors.co/generate'} >
+                <Palette size={48}/>
+                <Weather></Weather>
+            </Card>
+            </div>
+
+            <div className='grid8'>
+            <Card title={''} href={'https://coolors.co/generate'} >
+                <Palette size={48}/>
+            </Card>
+            </div>
+
+            <div className='grid9'>
+            <Card title={''} href={'https://coolors.co/generate'} >
+                <Palette size={48}/>
+            </Card>
+            </div>
+
+            <div className='grid10'>
+            <Card title={''} href={'https://coolors.co/generate'} >
+                <Clock></Clock>
+            </Card>
+            </div>
+
+            <div className='grid11'>
+            <Card title={'Colors'} href={'https://coolors.co/generate'} >
+                <Palette size={48}/>
+            </Card>
+            </div>
+
+            
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+
+    )
 }
 
 export default App
